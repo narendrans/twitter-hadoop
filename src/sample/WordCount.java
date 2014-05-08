@@ -31,7 +31,7 @@ public class WordCount {
 			System.exit(0);
 		}
 		String inputPath = args[0];
-		String outputPath = args[1];
+		String outputPath = args[1]; 
 		LOG.info("Input : " + inputPath);
 		LOG.info("Output : " + outputPath);
 

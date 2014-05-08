@@ -18,7 +18,7 @@ extends Reducer<Text,IntWritable,Text,IntWritable> {
 		System.out.println("reduce -- sample wordcount");
 		LOG.info("reduce -- sample wordcount ");
 		for (IntWritable val : values) {
-			sum += val.get();
+			sum += val.get(); 
 		}
 		result.set(sum);
 		context.write(key, result);

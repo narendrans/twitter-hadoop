@@ -6,6 +6,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.DoubleWritable;
+import org.apache.hadoop.io.MapWritable;
 
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
@@ -23,7 +24,7 @@ public class WordCountStripes {
 		Configuration conf = new Configuration();		
 
 		LOG.info("HDFS Root Path: {}", conf.get("fs.defaultFS"));
-		LOG.info("MR Framework: {}", conf.get("mapreduce.framework.name"));
+		LOG.info("MR Framework: {}", conf.get("mapreduce.framework.name")); 
 		
 		/* Set the Input/Output Paths on HDFS */
 		if(args.length < 2)
@@ -44,8 +45,10 @@ public class WordCountStripes {
 		Job job = Job.getInstance(conf);
 		job.setJarByClass(WordCountStripes.class);
 		job.setMapperClass(TokenizerMapperStripes.class);
-		job.setCombinerClass(MapSumReducer.class);
+		//job.setCombinerClass(MapSumReducer.class);
 		job.setReducerClass(MapSumReducer.class);
+		job.setMapOutputKeyClass(Text.class);
+		job.setMapOutputValueClass(MapWritable.class);
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(DoubleWritable.class);
 		FileInputFormat.addInputPath(job, new Path(inputPath));

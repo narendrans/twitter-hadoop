@@ -28,7 +28,7 @@ public class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
 		int medium = Integer.parseInt(readFile(input + "/medium.txt",
 				context.getConfiguration()));
 		int high = Integer.parseInt(readFile(input + "/high.txt",
-				context.getConfiguration()));
+				context.getConfiguration())); 
 
 		System.out.println("******** Current low, med and high: " + low + ", "
 				+ medium + "," + high);

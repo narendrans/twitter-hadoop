@@ -32,7 +32,7 @@ public class KMeansCluster {
 
 
 	private static final transient Logger LOG = LoggerFactory
-			.getLogger(KMeansCluster.class);
+			.getLogger(KMeansCluster.class); 
 
 	public static void main(String[] args) throws Exception {
 		

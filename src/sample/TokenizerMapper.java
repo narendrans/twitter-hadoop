@@ -21,7 +21,7 @@ public class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable>{
 			word.set(itr.nextToken());
 			System.out.println("map -- sample wordcount");
 			LOG.info("map -- sample wordcount ");
-			context.write(word, one);
+			context.write(word, one); 
 		}
 	}
 }
