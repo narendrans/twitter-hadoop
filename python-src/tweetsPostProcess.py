@@ -12,6 +12,14 @@ This script will
 - Generates the charts for @, # and trending words and saves them as images
 - Generates a pdf and shows it
 
+The input file should be of the below format
+
+abc 100
+allsd 23
+ksdll 5
+
+i.e, <word> <word_count>
+
 Use the following commands to install the dependency modules
 
 pip install numpy
@@ -20,7 +28,7 @@ pip install scipy
 
 Tested to work in OS X 10.9 with python 2.7, should be compatible with any linux system having python 2.6+
 
-Report bugs @ ns75@buffalo.edu
+Report bugs to ns75@buffalo.edu
  
 '''
  
