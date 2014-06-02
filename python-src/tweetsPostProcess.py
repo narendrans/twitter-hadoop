@@ -169,15 +169,15 @@ def main():
     width = 0.35  # the width of the bars
 
     fig, ax = plt.subplots()
-    my_colors = list(islice(cycle(['#0033CC', '#00FFCC', '#FF0066', '#FF9900', '#009933','#660066','#663300','#003300','#666633','#3333CC']), None, N))
-    for x,y,c,lb in zip(ind,key,my_colors,value):
-        ax.bar(x, y, width, color=c,label=lb)
+    my_colors = list(islice(cycle(['#0033CC', '#00FFCC', '#FF0066', '#FF9900', '#009933', '#660066', '#663300', '#003300', '#666633', '#3333CC']), None, N))
+    for x, y, c, lb in zip(ind, key, my_colors, value):
+        ax.bar(x, y, width, color=c, label=lb)
 
     # add some
     ax.set_ylabel('Count')
     ax.set_xlabel('Words')
     ax.set_title('Trending words and their counts')
-    ax.set_xticks(ind + width/2)
+    ax.set_xticks(ind + width / 2)
     ax.legend(prop={'size':6})
     ax.get_xaxis().set_ticks([])
     plt.setp(ax.get_xticklabels(), fontsize=7, rotation=45)
@@ -191,15 +191,15 @@ def main():
     width = 0.35  # the width of the bars
 
     fig1, ax = plt.subplots()
-    my_colors = list(islice(cycle(['#0033CC', '#00FFCC', '#FF0066', '#FF9900', '#009933','#660066','#663300','#003300','#666633','#3333CC']), None, N))
-    for x,y,c,lb in zip(ind,key1,my_colors,value1):
-        ax.bar(x, y, width, color=c,label=lb)
+    my_colors = list(islice(cycle(['#0033CC', '#00FFCC', '#FF0066', '#FF9900', '#009933', '#660066', '#663300', '#003300', '#666633', '#3333CC']), None, N))
+    for x, y, c, lb in zip(ind, key1, my_colors, value1):
+        ax.bar(x, y, width, color=c, label=lb)
 
     # add some
     ax.set_ylabel('Count')
     ax.set_xlabel('user mentions')
     ax.set_title('Top user mentions and their counts')
-    ax.set_xticks(ind + width/2)
+    ax.set_xticks(ind + width / 2)
     ax.legend(prop={'size':6})
     ax.get_xaxis().set_ticks([])
     plt.setp(ax.get_xticklabels(), fontsize=7, rotation=45)
@@ -213,15 +213,15 @@ def main():
     width = 0.35  # the width of the bars
 
     fig2, ax = plt.subplots()
-    my_colors = list(islice(cycle(['#0033CC', '#00FFCC', '#FF0066', '#FF9900', '#009933','#660066','#663300','#003300','#666633','#3333CC']), None, N))
-    for x,y,c,lb in zip(ind,key2,my_colors,value2):
-        ax.bar(x, y, width, color=c,label=lb)
+    my_colors = list(islice(cycle(['#0033CC', '#00FFCC', '#FF0066', '#FF9900', '#009933', '#660066', '#663300', '#003300', '#666633', '#3333CC']), None, N))
+    for x, y, c, lb in zip(ind, key2, my_colors, value2):
+        ax.bar(x, y, width, color=c, label=lb)
 
     # add some
     ax.set_ylabel('Count')
     ax.set_xlabel('hashtags')
     ax.set_title('Top hashtags and their counts')
-    ax.set_xticks(ind + width/2)
+    ax.set_xticks(ind + width / 2)
     ax.legend(prop={'size':6})
     ax.get_xaxis().set_ticks([])
     plt.setp(ax.get_xticklabels(), fontsize=7, rotation=45)
